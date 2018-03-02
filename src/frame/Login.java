@@ -239,7 +239,7 @@ public class Login extends javax.swing.JFrame {
     private void jLabel3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseReleased
         // TODO add your handling code here:
         int confirm = JOptionPane.showConfirmDialog(this,
-                "Yakin Untuk Keluar",
+                "Untuk Keluar",
                 "Konfirmasi Keluar Program",
                 JOptionPane.YES_NO_OPTION,
                 JOptionPane.QUESTION_MESSAGE);
