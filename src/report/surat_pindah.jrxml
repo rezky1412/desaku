@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="805873d2-7156-4142-859d-fa0075d8a84c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="212"/>
+	<parameter name="tahun" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="no" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nik" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nama" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nokk" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="alamats" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="alamatp" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Select * from r_pindah WHERE no_reg=$P{no}]]>
+	</queryString>
+	<field name="no_reg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_warga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="108" splitType="Stretch">
+			<staticText>
+				<reportElement x="112" y="0" width="335" height="34" uuid="c040e1a5-78bc-4a4e-beb7-964d42283be4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH KABUPATEN BOGOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="34" width="335" height="34" uuid="b061b2f9-f064-4ef7-9840-2bb231b668e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KECAMATAN CIOMAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="68" width="335" height="34" uuid="a2277421-07ef-48cd-aa5f-957a1b8ce42d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESA CIAPUS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="102" width="555" height="1" uuid="89abd2cf-7dd6-492e-aac6-a9985aa3c3bc"/>
+			</line>
+			<line>
+				<reportElement x="0" y="105" width="555" height="1" uuid="9cc02fda-00d0-498d-ad49-4a8381cf32bb"/>
+			</line>
+			<line>
+				<reportElement x="0" y="104" width="555" height="1" uuid="7a7e11aa-cfdf-414b-a80e-0e412adcf137"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="272" splitType="Stretch">
+			<staticText>
+				<reportElement x="156" y="18" width="240" height="20" uuid="5329801a-4654-4ada-a0ed-203815bcc90d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[SURAT KETERANGAN PINDAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="38" width="118" height="20" uuid="9461145c-74b4-434d-af97-ebfd766dcec6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[NOMOR 470 / F-1.08 /]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="334" y="38" width="57" height="20" uuid="c3476f7e-ab19-4b4e-a7e8-5952e96a0d9d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tahun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="38" width="18" height="20" uuid="61edbe81-0c8c-4cc2-8fcf-53c4aaed0144"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="323" y="38" width="11" height="20" uuid="e81f18c1-9d5a-4e18-81df-331f07c76fd9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="68" width="464" height="40" uuid="8a3b50f9-ec22-47c6-9d98-1f09cd5fa651"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Yang bertanda tangan dibawah ini, menerangkan permohonan pindah penduduk WNI dengan data sebagai berikut :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="108" width="207" height="20" uuid="00ff27d2-4917-47cb-960d-1c7762005840"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[1. NIK					:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="128" width="207" height="20" uuid="45c10543-0d0b-403d-96b1-dc787a452a23"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[2. NAMA				:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="148" width="207" height="20" uuid="1250c925-1b1e-49bf-a1c3-79213fce6a11"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[3. NOMOR KARTU KELUARGA	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="168" width="207" height="20" uuid="4709497d-68a2-4b31-96e2-c4f9d6b97806"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[4. ALAMAT SEKARANG		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="219" width="207" height="20" uuid="bbfc0647-01e0-4645-bb49-2c2e0c7822c3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[5. ALAMAT TUJUAN PINDAH	:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="253" y="108" width="209" height="20" uuid="3854580c-2a77-4899-89dc-923cec076e62"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="128" width="209" height="20" uuid="37e2a674-47f9-4587-a47e-5c56bc8bc76b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="148" width="209" height="20" uuid="50430c07-b469-4f17-a4b8-29e00e330dfb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nokk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="168" width="209" height="51" uuid="c02d4a18-3109-49db-8e23-8c023c782f5d"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alamats}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="219" width="209" height="51" uuid="bb097e1a-ffe8-4382-8c29-a20a930a0e15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alamatp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="318" splitType="Stretch">
+			<staticText>
+				<reportElement x="46" y="0" width="464" height="22" uuid="12257f1d-f92f-4c55-a2b4-e6f460079b7d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Adapun permohonan pindah penduduk WNI yang bersangkutan sebagaimana terlampir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="22" width="464" height="22" uuid="07237cc1-905e-4c76-b26a-0f5e4023d5ea"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Demikian surat keterangan pindah ini dibuat agar digunakan sebagaimana mestinya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="232" width="64" height="22" uuid="59ae3994-2968-43b0-9b6d-a745c7aa19c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[RAHMAT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="484" y="136" width="45" height="20" uuid="a6dfe058-995c-4d98-bcd9-43211ca1497f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tahun}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="399" y="134" width="37" height="22" uuid="54a9e731-d05c-4b78-81f8-b417c387b849"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Ciapus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="156" width="114" height="22" uuid="048acb05-81db-47cf-9c9a-07af90e00ee2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Kepala Desa Ciapus]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch"/>
+	</detail>
+	<pageFooter>
+		<band height="30" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

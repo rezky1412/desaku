@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="539" leftMargin="28" rightMargin="28" topMargin="71" bottomMargin="71" uuid="745d94ea-4ede-4db4-ab08-edc76fc7a19c">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="257"/>
+	<property name="ireport.y" value="795"/>
+	<parameter name="no" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="x1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="x2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="x3" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nama" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nokk" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nik" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="alamat" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="rt" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="rw" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="provinsi" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kab" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kec" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="desa" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kodepos" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tahun" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kepdes" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from r_ktp where no_reg=$P{no}]]>
+	</queryString>
+	<field name="no_reg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_warga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="123" splitType="Stretch">
+			<staticText>
+				<reportElement x="152" y="15" width="249" height="20" uuid="18239e4d-4a16-4b65-9e82-084e5eb6d958"/>
+				<textElement>
+					<font fontName="Calibri" size="16"/>
+				</textElement>
+				<text><![CDATA[FORMULIR KARTU TANDA PENDUDUK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="15" width="51" height="20" uuid="0d2bc6f4-8e3b-4f8b-8eef-922156ae08fa"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[F-1.21]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="52" width="539" height="67" uuid="4e2816e9-9e9c-4c5a-b1b7-429a20ed57a0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[   PERHATIAN :
+   1. Harap Diisi dengan hurup cetak dan menggunakan tinta hitam
+   2. Untuk kolom pilihan, harap memberi tanda silang (X) pada kolom pilihan
+   3. Setelah formulir ini diisi dan di tanda tangan  harap dikembalikan ke kantor  Desa / Kelurahan
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="131" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="18" width="143" height="20" uuid="f8e77fb4-97ea-4c91-a32e-d36864a0ceb8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH PROVINSI	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="38" width="143" height="20" uuid="d3de5a5e-947a-4cca-b825-61018d5d94e2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH KABUPATEN	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="58" width="143" height="20" uuid="3316331d-39d9-44b6-9893-f08c8065f495"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[KECAMATAN		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="78" width="143" height="20" uuid="027d36e6-dd43-4007-aecf-7ec03c4e122d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[KELURAHAN		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="18" width="43" height="20" uuid="3496357e-9942-4a35-960b-656489eca4e4"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="38" width="43" height="20" uuid="378100d7-6057-4963-b11b-616b382438fe"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="58" width="43" height="20" uuid="51063561-5c01-46ab-9dc5-5c806764267f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="78" width="43" height="20" uuid="2e2525b1-c0af-45d8-952f-70ffb1f8fdc7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="108" width="143" height="20" uuid="1b150e99-97ee-41ab-aaa9-b06921c39221"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[PERMOHONAN KTP	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="108" width="84" height="20" uuid="20eb3650-7cb6-4aa3-affc-3065dfc8e5c2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[   BARU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="108" width="84" height="20" uuid="7934c285-8d32-4c57-8e76-812a0712a5f9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[   PERPANJANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="108" width="84" height="20" uuid="29a4b8fe-fba2-466d-be6f-15565fa9a7e0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[   PERGANTIAN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="152" y="108" width="29" height="20" uuid="5c28f5a0-fd93-41ce-96d1-1d9c314e106a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{x1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="108" width="29" height="20" uuid="45b8b670-5f35-4a46-a354-2a5b58d500bd"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{x2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="108" width="29" height="20" uuid="a099fcd2-f28d-4d95-96ca-ed6cb36dc315"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{x3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="18" width="228" height="20" uuid="a2d5f7f0-0c16-4bc3-b1b1-9bb62510c5ce"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{provinsi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="38" width="228" height="20" uuid="c07b189f-6c3b-41f6-96dc-592d44242de2"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kab}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="58" width="228" height="20" uuid="031d80cc-de5e-4794-b485-f25f7d097b76"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kec}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="78" width="228" height="20" uuid="cbbe43c8-6e79-4be5-a01b-79659bf6bff2"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{desa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="308" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="11" width="143" height="20" uuid="7dd81dcc-ab9e-405b-a317-ace6cd4472ae"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[1. NAMA LENGKAP	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="34" width="143" height="20" uuid="6f27a7db-c714-442f-9629-0d4ac9fd823b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[2. NOMOR KK		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="57" width="143" height="20" uuid="6c83ff31-bfc9-41c6-878e-c278c6ec26f7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[3. NIK			:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="80" width="143" height="20" uuid="66f4890a-13d2-45b1-9ecb-6608703b6bd8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[4. ALAMAT		:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="152" y="11" width="283" height="20" uuid="f17ea144-1c8c-4e19-acf2-bbab95ae7e5d"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="34" width="283" height="20" uuid="d8ed7a31-8572-4ae3-9e3b-e6c31a9849ac"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nokk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="57" width="283" height="20" uuid="e9c1e7c8-823a-4870-86cb-0a7276983522"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="80" width="283" height="20" uuid="0295f989-6608-46ef-b41a-651140f89451"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alamat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="152" y="103" width="29" height="20" uuid="a92da4ce-f9b3-4b95-9971-f1be8372edb5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[RT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="103" width="29" height="20" uuid="18e0c9b6-95d3-4d28-b5a3-63a2990668cc"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[RW]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="195" y="103" width="31" height="20" uuid="db3cad49-2b7b-454d-8be0-8619dabf8c58"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="103" width="31" height="20" uuid="2fe7e7ce-e7fc-4358-bbb1-d198d8bfb0b2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rw}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="345" y="103" width="56" height="20" uuid="c1cba886-eebc-4130-afb2-bde15015cf03"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[KODEPOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="138" width="74" height="15" uuid="7c181926-de79-4b18-925b-67efcefc1eb2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="153" width="74" height="47" uuid="8bbfc138-43d5-44da-a09f-1d206b3019ad"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="153" width="74" height="47" uuid="5ce85ad9-b15c-4ef4-8ffb-558db721f566"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="138" width="74" height="15" uuid="30b6977e-d50d-4ed5-a21a-db8bd56be783"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="138" width="55" height="44" uuid="04b25e7b-c3f1-4979-95a6-ac79c896b46b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="210" width="109" height="89" uuid="22e33eda-14cb-4b10-b883-1e79321beb3e"/>
+				<textElement>
+					<font fontName="Calibri" size="7"/>
+				</textElement>
+				<text><![CDATA[Ket: cap jempol/tanda tangan
+Camat,
+
+
+
+
+
+(...................................................)
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="157" width="46" height="15" uuid="f3b0cede-76ae-43f4-8ce6-65b5dfe813a6"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[Pemohon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="213" width="120" height="15" uuid="70858c0c-dfe4-4764-8c23-9802bb5ee054"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[Mengetahui Kepala Desa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="417" y="103" width="45" height="20" uuid="3e9a9701-6006-4078-9b0a-ac2f58e37034"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kodepos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="138" width="57" height="20" uuid="ad173569-fd19-4e79-9e47-1d8055bfbdf7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{desa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="509" y="138" width="30" height="20" uuid="aad29c0e-5565-406f-ac32-09e5b73c8a06"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tahun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="263" width="100" height="20" uuid="59e1d173-a604-444c-8c9f-f0cf28be1aa4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kepdes}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+</jasperReport>

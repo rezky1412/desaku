@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="805873d2-7156-4142-859d-fa0075d8a84c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tahun" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="no" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kode" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kab" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kec" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="desa" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="alamat" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="jenis" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Select * from r_surat_keluar WHERE no=$P{no}]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_surat" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="108" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="102" width="555" height="1" uuid="89abd2cf-7dd6-492e-aac6-a9985aa3c3bc"/>
+			</line>
+			<line>
+				<reportElement x="0" y="105" width="555" height="1" uuid="9cc02fda-00d0-498d-ad49-4a8381cf32bb"/>
+			</line>
+			<line>
+				<reportElement x="0" y="104" width="555" height="1" uuid="7a7e11aa-cfdf-414b-a80e-0e412adcf137"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="24" uuid="3a94c739-77cf-4802-9a7c-7a586d339caf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kab}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="24" width="555" height="24" uuid="5755aeb4-32e1-419f-a832-06fb3305bc47"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kec}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="48" width="555" height="24" uuid="6c67ee77-7a11-4fda-bcd2-0bf37927c5a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{desa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="72" width="555" height="24" uuid="5d181294-e154-4487-86a2-d1a89d41778f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alamat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="312" splitType="Stretch">
+			<staticText>
+				<reportElement x="179" y="38" width="50" height="20" uuid="9461145c-74b4-434d-af97-ebfd766dcec6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[NOMOR]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="339" y="38" width="57" height="20" uuid="c3476f7e-ab19-4b4e-a7e8-5952e96a0d9d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tahun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="38" width="18" height="20" uuid="61edbe81-0c8c-4cc2-8fcf-53c4aaed0144"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="328" y="38" width="11" height="20" uuid="e81f18c1-9d5a-4e18-81df-331f07c76fd9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="18" width="555" height="20" uuid="727bddfa-34eb-4b5c-9a5d-70f978231c8b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jenis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="38" width="27" height="20" uuid="a661b6b1-199a-44c0-9cfc-0388fdf85998"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="256" y="38" width="55" height="20" uuid="0ffb1221-7ee8-4d81-a4bd-ba598e6b54bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[/KESRA /]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="318" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch"/>
+	</detail>
+	<pageFooter>
+		<band height="30" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

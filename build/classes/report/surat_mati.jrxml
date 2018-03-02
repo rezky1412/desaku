@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="805873d2-7156-4142-859d-fa0075d8a84c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tahun" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="no" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="hari" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tanggal" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="di" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="alamat" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nama" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="umur" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pelapor" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="hub" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Select * from r_suratmati WHERE no_reg=$P{no}]]>
+	</queryString>
+	<field name="no_reg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="108" splitType="Stretch">
+			<staticText>
+				<reportElement x="112" y="0" width="335" height="34" uuid="c040e1a5-78bc-4a4e-beb7-964d42283be4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH KABUPATEN BOGOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="34" width="335" height="34" uuid="b061b2f9-f064-4ef7-9840-2bb231b668e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KECAMATAN CIOMAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="68" width="335" height="34" uuid="a2277421-07ef-48cd-aa5f-957a1b8ce42d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESA CIAPUS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="102" width="555" height="1" uuid="89abd2cf-7dd6-492e-aac6-a9985aa3c3bc"/>
+			</line>
+			<line>
+				<reportElement x="0" y="105" width="555" height="1" uuid="9cc02fda-00d0-498d-ad49-4a8381cf32bb"/>
+			</line>
+			<line>
+				<reportElement x="0" y="104" width="555" height="1" uuid="7a7e11aa-cfdf-414b-a80e-0e412adcf137"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="312" splitType="Stretch">
+			<staticText>
+				<reportElement x="156" y="18" width="240" height="20" uuid="5329801a-4654-4ada-a0ed-203815bcc90d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[SURAT KETERANGAN KEMATIAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="38" width="132" height="20" uuid="9461145c-74b4-434d-af97-ebfd766dcec6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[NOMOR 474.3 /KESRA /]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="339" y="38" width="57" height="20" uuid="c3476f7e-ab19-4b4e-a7e8-5952e96a0d9d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tahun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="38" width="18" height="20" uuid="61edbe81-0c8c-4cc2-8fcf-53c4aaed0144"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="328" y="38" width="11" height="20" uuid="e81f18c1-9d5a-4e18-81df-331f07c76fd9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="68" width="464" height="40" uuid="8a3b50f9-ec22-47c6-9d98-1f09cd5fa651"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Yang bertanda tangan dibawah ini menerangkan bahwa pada :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="108" width="133" height="20" uuid="00ff27d2-4917-47cb-960d-1c7762005840"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Hari			:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="128" width="133" height="20" uuid="45c10543-0d0b-403d-96b1-dc787a452a23"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Tanggal		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="148" width="133" height="20" uuid="1250c925-1b1e-49bf-a1c3-79213fce6a11"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Di			:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="179" y="108" width="209" height="20" uuid="3854580c-2a77-4899-89dc-923cec076e62"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hari}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="128" width="209" height="20" uuid="37e2a674-47f9-4587-a47e-5c56bc8bc76b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="148" width="209" height="20" uuid="50430c07-b469-4f17-a4b8-29e00e330dfb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{di}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="168" width="464" height="40" uuid="725ba40b-e460-4836-8ec4-e2c69a9c0885"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Telah Meninggal Dunia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="208" width="133" height="20" uuid="700f5b40-cf2a-4f16-ba29-f21f47c37745"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Bernama		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="228" width="133" height="20" uuid="c417d7a8-11a4-44ac-bd76-4dd16498a28c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Umur			:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="248" width="133" height="20" uuid="72566998-145e-40ff-8beb-2aa960b70d73"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Alamat			:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="179" y="208" width="209" height="20" uuid="73ef3bae-9a0c-488a-a167-42ecf4b080c2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="228" width="209" height="20" uuid="1cecf024-2fa4-4f61-8205-2dc57a435315"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{umur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="248" width="209" height="20" uuid="6b55f3de-4f26-4571-a488-434db7d31b06"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alamat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="318" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="0" width="464" height="22" uuid="12257f1d-f92f-4c55-a2b4-e6f460079b7d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Surat keterangan ini dibuat atas dasar yang sebenarnya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="266" width="64" height="22" uuid="59ae3994-2968-43b0-9b6d-a745c7aa19c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[RAHMAT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="484" y="170" width="45" height="20" uuid="a6dfe058-995c-4d98-bcd9-43211ca1497f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tahun}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="399" y="168" width="37" height="22" uuid="54a9e731-d05c-4b78-81f8-b417c387b849"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Ciapus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="190" width="114" height="22" uuid="048acb05-81db-47cf-9c9a-07af90e00ee2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Kepala Desa Ciapus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="22" width="225" height="20" uuid="42bf92ad-9bca-4d3b-af6b-33d23cb708fa"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Nama Yang Melaporkan		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="42" width="225" height="20" uuid="1cb73bcb-a55b-4ec8-a3d5-109892681219"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Hubungan Dengan Yang Meninggal	:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="271" y="22" width="213" height="20" uuid="3042d088-bd52-4df6-990c-26d14ba5d3d2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pelapor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="42" width="213" height="20" uuid="b66e7b2b-136a-4fe1-9c72-71ebd976bba2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hub}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch"/>
+	</detail>
+	<pageFooter>
+		<band height="30" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
